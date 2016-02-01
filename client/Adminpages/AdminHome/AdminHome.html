@@ -1,0 +1,30 @@
+<template name="AdminHome">
+	{{ >Header }}
+    <div class="container">
+        <div class="row">
+            {{>sidebar}}
+            <div class="col-md-9"><br/>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr><th>Header1</th><th>Header2</th><th>Header3</th><th>Header4</th><th>Header5</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Row 1</td><td>Row 2</td><td>Row 3</td><td>Row 4</td><td>Row 5</td></tr>
+                            <tr><td>Row 1</td><td>Row 2</td><td>Row 3</td><td>Row 4</td><td>Row 5</td></tr>
+                        </tbody>
+                    </table>
+                </div>	
+            </div>
+            <!-- <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Pending Facilities <span class="pull-right">Logged: {{ adminId }} </span></h3>
+                </div>
+                <div class="panel-body">
+                    {{> reactiveTable collection=table settings=tableSettings}}
+                </div>
+            </div> -->
+        </div>
+    </div><hr>
+	{{ >Footer }}
+</template>

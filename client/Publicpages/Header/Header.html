@@ -1,0 +1,42 @@
+<template name="Header">
+    <header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{pathFor 'Home'}}"><span><img height="25px" src="/images/logo.jpg" alt="Icon" />PetPLUS</span></a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/About">About Us</a></li>
+                    <li><a href="/Services">Services</a></li>
+                    <li><a href="/Clients">Clients</a></li>
+                    <li><a href="/Contact">Contact Us</a></li>
+                    {{#if currentUser}}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i> {{ currentUser.profile.OwnerFirstName }} {{ currentUser.profile.facilityOwner }} <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ pathFor 'userprofile' }}"><i class="fa fa-user"></i> Account info</a></li>
+                            {{#if currentUser.profile.facilityOwner}}
+                            <li><a href="{{ pathFor 'AdminHome' }}"><i class="fa fa-user"></i> Admin Home</a></li>
+                            {{/if}}
+                            <li><a href="#" class="logout"><i class="fa fa-lock"></i> Sign Out</a></li>
+                        </ul>
+                    </li>
+                    {{else}}
+                    <li><a href="{{ pathFor 'FacilityRegistration' }}"><strong class="navbar-green-bg">Sign Up</strong></a></li>
+                    <li><a href="{{ pathFor 'login' }}"><strong class="navbar-green-bg">Sign in</strong></a></li>
+                    <li><a href="{{ pathFor 'AdminRegistration' }}"><strong class="navbar-green-bg">Admin</strong></a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </div>
+    </header>
+</template>

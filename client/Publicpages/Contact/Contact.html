@@ -1,0 +1,92 @@
+<template name="Contact">
+	{{> Header }}
+    <div class="container">
+        <div class="row jumbotron">
+            <h3>Contact us</h3>
+            <div class="font16 pull-left">
+                <h5 class="pull-right redtext">
+                    <i>*Please fill in all fields</i>
+                </h5>
+                <form class="well form-horizontal">
+                    <br/><br/>
+                    <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">*Full Name</label>
+                                <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group">
+											<span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-user"></i></span> <input name="fullname"
+                                                                                                        placeholder="Full Name" class="form-control" type="text"
+                                                                                                        required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">*E-Mail</label>
+                                <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group">
+											<span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-envelope"></i></span> <input
+                                            name="email" placeholder="E-Mail Address"
+                                            class="form-control" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">*Phone #</label>
+                                <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group">
+											<span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-earphone"></i></span> <input
+                                            name="phone" placeholder="(123)123-1234"
+                                            class="form-control" type="text" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">*Purpose</label>
+                                <div class="col-md-6">
+                                    <div class="radio">
+                                        <label> <input type="radio" name="reason"
+                                                       value="sales" checked="checked" />Sales
+                                        </label>&nbsp;&nbsp;&nbsp; <label> <input type="radio"
+                                                                                  name="reason" value="enquiry" />Enquiry
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">*Description in
+                                    detail</label>
+                                <div class="col-md-6 inputGroupContainer">
+                                    <div class="input-group">
+											<span class="input-group-addon"><i
+                                                    class="glyphicon glyphicon-pencil"></i></span>
+											<textarea class="form-control" name="description" rows="10"
+                                                      placeholder="Please describe in detail" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label"></label>
+                                <div class="col-md-6">
+                                    <button type="reset" class="btn btn-primary">Reset&nbsp;&nbsp;&nbsp;</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-primary">
+                                        Send <span class="glyphicon glyphicon-send"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        <hr>
+                        <h3>Our Locations</h3>
+                        <h4 class="pull-left">Digital Yantra Technologies| Address1,
+                            street1 |City, State, Zip |Office:xxx-xxx-xxxx
+                            |Cell:xxx-xxx-xxxx</h4>
+
+                    </fieldset>
+                </form>
+            </div>
+    </div><hr>
+    </div>
+	{{> Footer }}
+</template>
